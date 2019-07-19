@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!-- saved from url=(0124)https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of -->
+<html itemscope="" itemtype="http://schema.org/QAPage" class=""><script src="./q1_files/rules-p-c1rF4kxgLUzNc.js" async=""></script><script async="" src="./q1_files/quant.js"></script><script async="" src="./q1_files/beacon.js"></script><script async="" src="./q1_files/analytics.js"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <title>signal analysis - Can a Fourier Transform exist even if the j$\omega$ axis is not in the Region of Convergence in it's Laplace Transform - Signal Processing Stack Exchange</title>
+        <link rel="shortcut icon" href="https://cdn.sstatic.net/Sites/dsp/img/favicon.ico?v=c671ebf56db6">
+        <link rel="apple-touch-icon image_src" href="https://cdn.sstatic.net/Sites/dsp/img/apple-touch-icon.png?v=966f090a2019">
+        <link rel="search" type="application/opensearchdescription+xml" title="Signal Processing Stack Exchange" href="https://dsp.stackexchange.com/opensearch.xml">
+
+
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of">
+        <meta property="og:site_name" content="Signal Processing Stack Exchange">
+        <meta property="og:image" itemprop="image primaryImageOfPage" content="https://cdn.sstatic.net/Sites/dsp/img/apple-touch-icon@2.png?v=e0439310c223">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:domain" content="dsp.stackexchange.com">
+        <meta name="twitter:site" content="@StackSignals">
+        <meta name="twitter:creator" content="@StackSignals">
+        <meta name="twitter:title" property="og:title" itemprop="title name" content="Can a Fourier Transform exist even if the j$\omega$ axis is not in the Region of Convergence in it&#39;s Laplace Transform">
+        <meta name="twitter:description" property="og:description" itemprop="description" content="A couple of confusions have been occurred. The Signal I&#39;m considering is f(t) = sin(t)*u(t)
+Fourier Transform of it can be derived.
+$-i \pi  (\delta (\omega -1)-\delta (\omega +1))$
+According to my ">
+        <script src="./q1_files/jquery.min.js"></script>
+        <script src="./q1_files/stub.en.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./q1_files/stacks.css">
+    <link rel="stylesheet" type="text/css" href="./q1_files/primary.css">
+
+    
+            <link rel="alternate" type="application/atom+xml" title="Feed for question &#39;Can a Fourier Transform exist even if the j$\omega$ axis is not in the Region of Convergence in it&#39;s Laplace Transform&#39;" href="https://dsp.stackexchange.com/feeds/question/53875">
+            <meta name="twitter:app:country" content="US">
+            <meta name="twitter:app:name:iphone" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:iphone" content="871299723">
+            <meta name="twitter:app:url:iphone" content="se-zaphod://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of">
+            <meta name="twitter:app:name:ipad" content="Stack Exchange iOS">
+            <meta name="twitter:app:id:ipad" content="871299723">
+            <meta name="twitter:app:url:ipad" content="se-zaphod://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of">
+            <meta name="twitter:app:name:googleplay" content="Stack Exchange Android">
+            <meta name="twitter:app:url:googleplay" content="http://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of">
+            <meta name="twitter:app:id:googleplay" content="com.stackexchange.marvin">
+        <script>
+
+            StackExchange.ready(function () {
+                
+                StackExchange.using("postValidation", function () {
+                    StackExchange.postValidation.initOnBlurAndSubmit($('#post-form'), 2, 'answer');
+                });
+
+                
+                StackExchange.question.init({showAnswerHelp:true,totalCommentCount:0,shownCommentCount:0,highlightColor:'#F4A83D',backgroundColor:'#FFF',questionId:53875});
+
+                styleCode();
+
+                    StackExchange.realtime.subscribeToQuestion('295', '53875');
+                                                    StackExchange.using("gps", function () { StackExchange.gps.trackOutboundClicks('#content', '.post-text'); });
+
+            });
+        </script>
+
+        
+        
+        
+        
+        
+        
+                    <script type="text/x-mathjax-config;executed=true">
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                    TeX: { 
+                        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+                    messageStyle: "none",
+                    
+                    styles: { ".MathJax_Display, .MathJax_Preview, .MathJax_Preview > *": { "background": "inherit" } }
+            });
+            </script>
+            <script src="./q1_files/MathJax.js"></script>
+        <script>
+        StackExchange.ready(function () {
+            StackExchange.realtime.init('wss://qa.sockets.stackexchange.com');
+            StackExchange.realtime.subscribeToReputationNotifications('295');
+                StackExchange.realtime.subscribeToTopBarNotifications('295');
+        });
+    </script>
+    <script>
+        StackExchange.init({"locale":"en","serverTime":1543909580,"routeName":"Questions/Show","stackAuthUrl":"https://stackauth.com","networkMetaHostname":"meta.stackexchange.com","site":{"name":"Signal Processing Stack Exchange","description":"Q&A for practitioners of the art and science of signal, image and video processing","isNoticesTabEnabled":true,"enableNewTagCreationWarning":false,"insertSpaceAfterNameTabCompletion":false,"id":295,"childUrl":"https://dsp.meta.stackexchange.com","enableSocialMediaInSharePopup":true,"protocol":"https"},"user":{"fkey":"cbe7f12fa34bc340cf6ef5ccdff4823e8eb1a1854ada001c47c98e6241377b4e","tid":"eec020d1-49f1-e035-ea33-a89471139d0f","rep":0,"isAnonymous":true,"isAnonymousNetworkWide":true,"ab":{"inline_signup_hero":{"v":"d","g":2}}},"realtime":{"newest":true,"active":true,"tagged":true,"staleDisconnectIntervalInHours":0,"workerIframeDomain":"https://cdn.sstatic.net"},"events":{"postType":{"question":1},"postEditionSection":{"title":1,"body":2,"tags":3}},"story":{"minCompleteBodyLength":75,"likedTagsMaxLength":300,"dislikedTagsMaxLength":300},"jobPreferences":{"maxNumDeveloperRoles":2,"maxNumIndustries":4},"svgIconPath":"https://cdn.sstatic.net/Img/svg-icons","svgIconHash":"38192da1e2db"}, {"site":{"allowImageUploads":true,"enableUserHovercards":true,"enableImgurHttps":true,"forceHttpsImages":true,"stacksValidation":true},"userMessaging":{},"comments":{},"userProfile":{},"tags":{},"accounts":{"currentPasswordRequiredForChangingStackIdPassword":true},"flags":{"allowRetractingFlags":true},"snippets":{"renderDomain":"stacksnippets.net"},"paths":{},"markdown":{"asteriskIntraWordEmphasis":true},"monitoring":{"clientTimingsAbsoluteTimeout":30000,"clientTimingsDebounceTimeout":1000},"mentions":{"maxNumUsersInDropdown":50},"slack":{"sidebarAdDismissCookie":"slack-sidebar-ad"}});
+        StackExchange.using.setCacheBreakers({"js/prettify-full.en.js":"fe8dced10ffa","js/moderator.en.js":"c48addfbc3c8","js/full-anon.en.js":"8c3b917c3fb7","js/full.en.js":"f2dcf2a9a850","js/wmd.en.js":"2b07fb4cdb29","js/mobile.en.js":"13ddd7009887","js/help.en.js":"15e839731490","js/tageditor.en.js":"8fc88803d94e","js/tageditornew.en.js":"cf0a5c0ac0e1","js/inline-tag-editing.en.js":"6566adfb26a8","js/revisions.en.js":"55ce84de22c7","js/review.en.js":"4d3b6155893a","js/tagsuggestions.en.js":"b278f9a0b23b","js/post-validation.en.js":"916be688ee7f","js/explore-qlist.en.js":"cd6e5274146c","js/events.en.js":"987bbcaee59a","js/keyboard-shortcuts.en.js":"ccc5566b7edf","js/external-editor.en.js":"2f8d23e02b3a","js/adops.en.js":"22a9bd59b1e9","js/begin-edit-event.en.js":"0e29b9595208","js/mathjax-editing.en.js":"87126a3bf382"});
+        StackExchange.using("gps", function() {
+             StackExchange.gps.init(true);
+        });
+    </script>
+    <noscript id="noscript-css"><style>body,.top-bar{margin-top:1.9em}</style></noscript>
+    <script async="" src="./q1_files/full-anon.en.js"></script><script async="" src="./q1_files/post-validation.en.js"></script><script async="" src="./q1_files/external-editor.en.js"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 5px 0px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; -khtml-border-radius: 5px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 1px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: .7em}
+.MathJax_MenuRadioCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuLabel {padding: 1px 2em 3px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #DDDDDD; margin: 4px 3px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: #606872; color: white}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+.MathJax_Display, .MathJax_Preview, .MathJax_Preview > * {background: inherit}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none; box-sizing: content-box}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Blank; src: url('about:blank')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+        <body class="question-page" id="body_container" style=""><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+    <div id="notify-container"></div>
+    <div id="custom-header"></div>
+
+
+
+
+<header class="top-bar js-top-bar _fixed">
+    
+</header>
+    
+
+    
+
+
+    
+
+
+    <div class="container  ">
+            
+                
+        <div id="content">
+
+
+            
+
+
+<div itemscope="" itemtype="http://schema.org/Question">
+    <link itemprop="image" href="https://cdn.sstatic.net/Sites/dsp/img/apple-touch-icon.png?v=966f090a2019">
+
+    <div class="inner-content clearfix">
+    
+    
+
+            <div id="question-header">
+                    <h1 itemprop="name"><a href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of" class="question-hyperlink">Can a Fourier Transform exist even if the j<span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 0.835em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.669em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.919em, 1000.63em, 2.627em, -999.998em); top: -2.498em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: STIXGeneral-Italic;">ω</span></span><span style="display: inline-block; width: 0px; height: 2.502em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.048em; border-left: 0px solid; width: 0px; height: 0.653em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ω</mi></math></span></span><script type="math/tex" id="MathJax-Element-1">\omega</script> axis is not in the Region of Convergence in it's Laplace Transform</a></h1>
+
+            
+
+
+
+        </div>
+            <div id="mainbar" role="main" aria-label="question and answers">
+
+            
+
+<div class="question" data-questionid="53875" id="question">
+
+    
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="53875">
+        <a class="vote-up-off" title="This question shows research effort; it is useful and clear">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This question does not show any research effort; it is unclear or not useful">down vote</a>
+
+        <a class="star-off" href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of#">favorite</a>
+        <div class="favoritecount"><b></b></div>
+
+
+
+</div>
+
+            </div>
+
+            
+<div class="postcell post-layout--right">
+    <div class="post-text" itemprop="text">
+
+<p>A couple of confusions have been occurred. The Signal I'm considering is <strong>f(t) = sin(t)*u(t)</strong></p>
+
+<ol>
+<li><p>Fourier Transform of it can be derived.
+<em><span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;&amp;#x03C0;&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03B4;&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mi&gt;&amp;#x03B4;&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-4" style="width: 12.669em; display: inline-block;"><span style="display: inline-block; position: relative; width: 10.558em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1010.5em, 2.836em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-5"><span class="mo" id="MathJax-Span-6" style="font-family: STIXGeneral-Regular;">−</span><span class="mi" id="MathJax-Span-7" style="font-family: STIXGeneral-Italic;">i</span><span class="mi" id="MathJax-Span-8" style="font-family: STIXGeneral-Italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.058em;"></span></span><span class="mo" id="MathJax-Span-9" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-10" style="font-family: STIXGeneral-Italic;">δ</span><span class="mo" id="MathJax-Span-11" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-12" style="font-family: STIXGeneral-Italic;">ω</span><span class="mo" id="MathJax-Span-13" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">−</span><span class="mn" id="MathJax-Span-14" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">1</span><span class="mo" id="MathJax-Span-15" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-16" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">−</span><span class="mi" id="MathJax-Span-17" style="font-family: STIXGeneral-Italic; padding-left: 0.281em;">δ</span><span class="mo" id="MathJax-Span-18" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-19" style="font-family: STIXGeneral-Italic;">ω</span><span class="mo" id="MathJax-Span-20" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">+</span><span class="mn" id="MathJax-Span-21" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">1</span><span class="mo" id="MathJax-Span-22" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-23" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>−</mo><mi>i</mi><mi>π</mi><mo stretchy="false">(</mo><mi>δ</mi><mo stretchy="false">(</mo><mi>ω</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>−</mo><mi>δ</mi><mo stretchy="false">(</mo><mi>ω</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-2">-i \pi  (\delta (\omega -1)-\delta (\omega +1))</script></span></em></p></li>
+<li><p>According to my mathematica code, the ROC of LaplaceTransformation didn't have the j<span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-3-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-24" style="width: 0.836em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.669em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.892em, 1000.61em, 2.669em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-25"><span class="mi" id="MathJax-Span-26" style="font-family: STIXGeneral-Italic;">ω</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ω</mi></math></span></span><script type="math/tex" id="MathJax-Element-3">\omega</script></span> axis in it's region of convergence.( <strong>Re{s}&gt;0</strong> )</p></li>
+</ol>
+
+<p>So it's not stable. (Makes sense. sin(t) is not absolutely summable)
+<a href="https://www.wolframcloud.com/objects/ramithuh/Published/misc_sin_laplace.nb" rel="nofollow noreferrer">https://www.wolframcloud.com/objects/ramithuh/Published/misc_sin_laplace.nb</a></p>
+
+<ol start="3">
+<li>So, can a Fourier Transform exist even if the j<span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-4-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-27" style="width: 0.836em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.669em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.892em, 1000.61em, 2.669em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-28"><span class="mi" id="MathJax-Span-29" style="font-family: STIXGeneral-Italic;">ω</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.67em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>ω</mi></math></span></span><script type="math/tex" id="MathJax-Element-4">\omega</script></span>  axis is not in the Region of Convergence in it's Laplace Transform? </li>
+</ol>
+
+<p>Things got worse when I considered <strong>f(t) = sin(t)</strong>. It's Laplace Transform Integral didn't converge. So considering <strong>sin(t)*u(t)</strong> and s<strong>in(t)*u(-t)</strong> separately, I got two different ROC which doesn't have an overlap. <strong><em>Re{s} &gt; 0</em></strong> and <strong><em>Re{s} &lt; 0</em></strong>. So it means that the Laplace transform of Sin(t) doesn't exist right? Initially what i thought is Laplace Transform can cover all the signals which FourierTransform covers. 
+Turns out it's not the case?</p>
+
+<p>Please point out in which step of my reasoning is wrong...</p>
+
+<p>Thanks a bunch! :)</p>
+
+<p><strong>Update: Thank you for pointing out my mistake. :D
+<span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-5-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;F&lt;/mi&gt;&lt;mo class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot; stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;s&lt;/mi&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;i&lt;/mi&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;n&lt;/mi&gt;&lt;mo class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot; stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;t&lt;/mi&gt;&lt;mo class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot; stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;&amp;#x2217;&lt;/mo&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;u&lt;/mi&gt;&lt;mo class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot; stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot;&gt;t&lt;/mi&gt;&lt;mo class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot; stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo class=&quot;MJX-tex-caligraphic&quot; mathvariant=&quot;script&quot; stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;&amp;#x03C0;&lt;/mi&gt;&lt;mi&gt;&amp;#x03B4;&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mfrac&gt;&lt;mi&gt;i&lt;/mi&gt;&lt;mi&gt;&amp;#x03C0;&lt;/mi&gt;&lt;mi&gt;&amp;#x03B4;&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mo&gt;&amp;#x2212;&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-30" style="width: 32.336em; display: inline-block;"><span style="display: inline-block; position: relative; width: 26.947em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.947em, 1026.95em, 3.669em, -999.997em); top: -2.997em; left: 0em;"><span class="mrow" id="MathJax-Span-31"><span class="texatom" id="MathJax-Span-32"><span class="mrow" id="MathJax-Span-33"><span class="mi" id="MathJax-Span-34" style="font-family: STIXNonUnicode-Italic;"><span style="display: inline-block; overflow: hidden; height: 1px; width: 0.058em;"></span></span><span class="mo" id="MathJax-Span-35" style="font-family: STIXGeneral-Italic;">(</span><span class="mi" id="MathJax-Span-36" style="font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-37" style="font-family: STIXGeneral-Italic;">i</span><span class="mi" id="MathJax-Span-38" style="font-family: STIXGeneral-Italic;">n</span><span class="mo" id="MathJax-Span-39" style="font-family: STIXGeneral-Italic;">(</span><span class="mi" id="MathJax-Span-40" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-41" style="font-family: STIXGeneral-Italic;">)</span><span class="mo" id="MathJax-Span-42" style="padding-left: 0.281em;"><span style="font-family: STIXGeneral, &quot;Arial Unicode MS&quot;, serif; font-size: 83%; font-style: normal; font-weight: normal;">∗</span></span><span class="mi" id="MathJax-Span-43" style="font-family: STIXGeneral-Italic; padding-left: 0.281em;">u</span><span class="mo" id="MathJax-Span-44" style="font-family: STIXGeneral-Italic;">(</span><span class="mi" id="MathJax-Span-45" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-46" style="font-family: STIXGeneral-Italic;">)</span><span class="mo" id="MathJax-Span-47" style="font-family: STIXGeneral-Italic;">)</span></span></span><span class="mo" id="MathJax-Span-48" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">=</span><span class="mo" id="MathJax-Span-49" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">−</span><span class="mfrac" id="MathJax-Span-50"><span style="display: inline-block; position: relative; width: 0.503em; height: 0px; margin-right: 0.114em; margin-left: 0.114em;"><span style="position: absolute; clip: rect(3.336em, 1000.28em, 4.169em, -999.997em); top: -4.386em; left: 50%; margin-left: -0.164em;"><span class="mn" id="MathJax-Span-51" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1000.34em, 4.169em, -999.997em); top: -3.608em; left: 50%; margin-left: -0.164em;"><span class="mn" id="MathJax-Span-52" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(0.836em, 1000.5em, 1.225em, -999.997em); top: -1.275em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.503em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.058em;"></span></span></span></span><span class="mi" id="MathJax-Span-53" style="font-family: STIXGeneral-Italic;">i</span><span class="mi" id="MathJax-Span-54" style="font-family: STIXGeneral-Italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.058em;"></span></span><span class="mi" id="MathJax-Span-55" style="font-family: STIXGeneral-Italic;">δ</span><span class="mo" id="MathJax-Span-56" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-57" style="font-family: STIXGeneral-Italic;">ω</span><span class="mo" id="MathJax-Span-58" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">−</span><span class="mn" id="MathJax-Span-59" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">1</span><span class="mo" id="MathJax-Span-60" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-61" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">+</span><span class="mfrac" id="MathJax-Span-62" style="padding-left: 0.281em;"><span style="display: inline-block; position: relative; width: 0.503em; height: 0px; margin-right: 0.114em; margin-left: 0.114em;"><span style="position: absolute; clip: rect(3.336em, 1000.28em, 4.169em, -999.997em); top: -4.386em; left: 50%; margin-left: -0.164em;"><span class="mn" id="MathJax-Span-63" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1000.34em, 4.169em, -999.997em); top: -3.608em; left: 50%; margin-left: -0.164em;"><span class="mn" id="MathJax-Span-64" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(0.836em, 1000.5em, 1.225em, -999.997em); top: -1.275em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.503em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.058em;"></span></span></span></span><span class="mi" id="MathJax-Span-65" style="font-family: STIXGeneral-Italic;">i</span><span class="mi" id="MathJax-Span-66" style="font-family: STIXGeneral-Italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.058em;"></span></span><span class="mi" id="MathJax-Span-67" style="font-family: STIXGeneral-Italic;">δ</span><span class="mo" id="MathJax-Span-68" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-69" style="font-family: STIXGeneral-Italic;">ω</span><span class="mo" id="MathJax-Span-70" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">+</span><span class="mn" id="MathJax-Span-71" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">1</span><span class="mo" id="MathJax-Span-72" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-73" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">−</span><span class="mfrac" id="MathJax-Span-74" style="padding-left: 0.281em;"><span style="display: inline-block; position: relative; width: 2.281em; height: 0px; margin-right: 0.114em; margin-left: 0.114em;"><span style="position: absolute; clip: rect(3.336em, 1000.28em, 4.169em, -999.997em); top: -4.386em; left: 50%; margin-left: -0.164em;"><span class="mn" id="MathJax-Span-75" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1002.11em, 4.281em, -999.997em); top: -3.608em; left: 50%; margin-left: -1.053em;"><span class="mrow" id="MathJax-Span-76"><span class="mn" id="MathJax-Span-77" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span class="mo" id="MathJax-Span-78" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-79" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">ω</span><span class="mo" id="MathJax-Span-80" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">−</span><span class="mn" id="MathJax-Span-81" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span class="mo" id="MathJax-Span-82" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(0.836em, 1002.28em, 1.225em, -999.997em); top: -1.275em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.281em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.058em;"></span></span></span></span><span class="mo" id="MathJax-Span-83" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">+</span><span class="mfrac" id="MathJax-Span-84" style="padding-left: 0.281em;"><span style="display: inline-block; position: relative; width: 2.281em; height: 0px; margin-right: 0.114em; margin-left: 0.114em;"><span style="position: absolute; clip: rect(3.336em, 1000.28em, 4.169em, -999.997em); top: -4.386em; left: 50%; margin-left: -0.164em;"><span class="mn" id="MathJax-Span-85" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.336em, 1002.11em, 4.281em, -999.997em); top: -3.608em; left: 50%; margin-left: -1.053em;"><span class="mrow" id="MathJax-Span-86"><span class="mn" id="MathJax-Span-87" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">2</span><span class="mo" id="MathJax-Span-88" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-89" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">ω</span><span class="mo" id="MathJax-Span-90" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">+</span><span class="mn" id="MathJax-Span-91" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span class="mo" id="MathJax-Span-92" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(0.836em, 1002.28em, 1.225em, -999.997em); top: -1.275em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 2.281em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.058em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 3.003em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.663em; border-left: 0px solid; width: 0px; height: 1.803em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mi class="MJX-tex-caligraphic" mathvariant="script">F</mi><mo class="MJX-tex-caligraphic" mathvariant="script" stretchy="false">(</mo><mi class="MJX-tex-caligraphic" mathvariant="script">s</mi><mi class="MJX-tex-caligraphic" mathvariant="script">i</mi><mi class="MJX-tex-caligraphic" mathvariant="script">n</mi><mo class="MJX-tex-caligraphic" mathvariant="script" stretchy="false">(</mo><mi class="MJX-tex-caligraphic" mathvariant="script">t</mi><mo class="MJX-tex-caligraphic" mathvariant="script" stretchy="false">)</mo><mo class="MJX-tex-caligraphic" mathvariant="script">∗</mo><mi class="MJX-tex-caligraphic" mathvariant="script">u</mi><mo class="MJX-tex-caligraphic" mathvariant="script" stretchy="false">(</mo><mi class="MJX-tex-caligraphic" mathvariant="script">t</mi><mo class="MJX-tex-caligraphic" mathvariant="script" stretchy="false">)</mo><mo class="MJX-tex-caligraphic" mathvariant="script" stretchy="false">)</mo></mrow><mo>=</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>i</mi><mi>π</mi><mi>δ</mi><mo stretchy="false">(</mo><mi>ω</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>i</mi><mi>π</mi><mi>δ</mi><mo stretchy="false">(</mo><mi>ω</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo><mo>−</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo stretchy="false">(</mo><mi>ω</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac><mo>+</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mo stretchy="false">(</mo><mi>ω</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-5"> \mathcal{F(sin(t)*u(t))} = -\frac{1}{2} i \pi  \delta (\omega -1)+\frac{1}{2} i \pi  \delta (\omega +1)-\frac{1}{2 (\omega -1)}+\frac{1}{2 (\omega +1)}</script></span></strong></p>
+    </div>
+
+        <div class="post-taglist grid gs4 gsy fd-column">
+            <div class="grid ps-relative d-block">
+                <a href="https://dsp.stackexchange.com/questions/tagged/signal-analysis" class="post-tag js-gps-track" title="show questions tagged &#39;signal-analysis&#39;" rel="tag">signal-analysis</a> <a href="https://dsp.stackexchange.com/questions/tagged/fourier-transform" class="post-tag js-gps-track" title="show questions tagged &#39;fourier-transform&#39;" rel="tag">fourier-transform</a> <a href="https://dsp.stackexchange.com/questions/tagged/continuous-signals" class="post-tag js-gps-track" title="show questions tagged &#39;continuous-signals&#39;" rel="tag">continuous-signals</a> <a href="https://dsp.stackexchange.com/questions/tagged/laplace-transform" class="post-tag js-gps-track" title="show questions tagged &#39;laplace-transform&#39;" rel="tag">laplace-transform</a> <a href="https://dsp.stackexchange.com/questions/tagged/stability" class="post-tag js-gps-track" title="show questions tagged &#39;stability&#39;" rel="tag">stability</a> 
+            </div>
+        </div>
+
+    <div class="mb0 ">
+        <div class="mt16 pt4 grid gs8 gsy fw-wrap jc-end ai-start">
+            <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="https://dsp.stackexchange.com/q/53875" title="short permalink to this question" class="short-link" id="link-post-53875">share</a><span class="lsep">|</span><a href="https://dsp.stackexchange.com/posts/53875/edit" class="suggest-edit-post" title="">improve this question</a></div>
+            </div>
+
+                <div class="post-signature grid--cell">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="https://dsp.stackexchange.com/posts/53875/revisions" title="show all edits to this post">edited <span title="2018-12-03 14:04:06Z" class="relativetime">17 hours ago</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>                </div>
+            <div class="post-signature owner grid--cell">
+<div class="user-info ">
+    <div class="user-action-time">
+        asked <span title="2018-12-03 13:21:11Z" class="relativetime">18 hours ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://dsp.stackexchange.com/users/37611/ramith-hettiarachchi"><div class="gravatar-wrapper-32"><img src="./q1_files/photo.jpg" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://dsp.stackexchange.com/users/37611/ramith-hettiarachchi">Ramith Hettiarachchi</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score " dir="ltr">8</span><span title="4 bronze badges"><span class="badge3"></span><span class="badgecount">4</span></span>
+        </div>
+    </div>
+</div>
+    <div class="js-new-contributor-indicator ps-relative">
+        <div class="new-contributor-indicator fc-medium py6 px8 bbr-sm">
+            <span class="js-new-contributor-label"><svg aria-hidden="true" class="svg-icon iconWave" width="18" height="18" viewBox="0 0 18 18"><path d="M10.7 17c-2.3 0-3.9-2.05-5.07-3.54l-.49-.6c-.67-.8-1.59-1.63-2.4-2.36A10.91 10.91 0 0 1 1.1 8.87a.79.79 0 0 1-.09-.56c.04-.19.14-.34.27-.4.14-.07.29-.1.45-.1.35 0 .67.18.87.34l3.5 2.75c.04.03.1.03.13 0a.09.09 0 0 0 .02-.13l-.02-.02c-.57-.8-3.42-4.77-3.71-5.15-.21-.27-.3-.58-.24-.84.05-.2.2-.37.4-.48.18-.09.35-.13.52-.13.44 0 .76.28.96.51l3.6 4.42c.04.04.07.06.14.02.05-.02.06-.07.03-.12L4.41 2.96a.94.94 0 0 1-.1-.73.92.92 0 0 1 .47-.57 1.06 1.06 0 0 1 1.4.39l3.8 6.14c.03.04.07.07.14.04.04-.03.06-.07.04-.13A153.8 153.8 0 0 0 8.1 2.54c-.31-.68-.2-1.14.36-1.42.52-.27 1.14-.07 1.47.48l3.69 8.3c.01.04.05.05.1.06a.1.1 0 0 0 .09-.07l.66-2.28c.1-.3.31-.56.62-.72.3-.15.65-.18.98-.1.69.2 1.09.87.89 1.52-.1.37-.46 1.73-.99 3.43l-.1.33c-.58 1.86-1.03 3.33-3.11 4.4-.7.35-1.38.53-2.05.53zm-5.84-.17c-.2.2-1.22 0-1.96-.74s-.92-1.75-.73-1.94c.2-.2.62.61 1.36 1.35.74.75 1.52 1.14 1.33 1.33zm8.39-14.61c.2-.2 1.2 0 1.95.74.74.74.92 1.75.73 1.94-.2.2-.62-.61-1.36-1.35-.74-.75-1.52-1.14-1.32-1.33z"></path></svg> New contributor</span>
+        </div>
+        <div class="js-new-contributor-popover temp-popover temp-popover__bottom">
+            <div class="temp-popover--arrow"></div>
+            <div class="p12 fs-caption">
+                <a href="https://dsp.stackexchange.com/users/37611/ramith-hettiarachchi">Ramith Hettiarachchi</a> is a new contributor to this site. Take care in asking for clarification, commenting, and answering.
+Check out our <a href="https://dsp.stackexchange.com/conduct">Code of Conduct</a>.            </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+                
+    <div class="post-layout--right">
+	    <div id="comments-53875" class="comments js-comments-container  dno">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+            </ul>
+	    </div>
+
+        <div id="comments-link-53875" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid answering questions in comments.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of#" onclick=""></a>
+        </div>         
+    </div>        </div>
+</div>
+
+
+
+        <div id="answers">
+
+                <a name="tab-top"></a>
+                <div id="answers-header">
+                    <div class="subheader answers-subheader">
+                        <h2 data-answercount="1">
+                                1 Answer
+                                <span style="display:none;" itemprop="answerCount">1</span>
+                        </h2>
+                        <div>
+                            
+<div id="tabs">
+        <a href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of?answertab=active#tab-top" data-nav-xhref="" title="Answers with the latest activity first" data-value="active" data-shortcut="A">
+            active</a>
+        <a href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of?answertab=oldest#tab-top" data-nav-xhref="" title="Answers in the order they were provided" data-value="oldest" data-shortcut="O">
+            oldest</a>
+        <a class="youarehere is-selected " href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of?answertab=votes#tab-top" data-nav-xhref="" title="Answers with the highest score first" data-value="votes" data-shortcut="V">
+            votes</a>
+    </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+  
+<a name="53876"></a>
+<div id="answer-53876" class="answer accepted-answer" data-answerid="53876" itemprop="acceptedAnswer" itemscope="" itemtype="http://schema.org/Answer">
+    <div class="post-layout">
+            <div class="votecell post-layout--left">
+                
+
+<div class="vote">
+        <input type="hidden" name="_id_" value="53876">
+        <a class="vote-up-off" title="This answer is useful">up vote</a>
+        <span itemprop="upvoteCount" class="vote-count-post ">1</span>
+        <a class="vote-down-off" title="This answer is not useful">down vote</a>
+
+
+
+        <span class="vote-accepted-on load-accepted-answer-date" title="loading when this answer was accepted...">accepted</span>
+
+
+</div>
+
+            </div>
+            
+
+
+<div class="answercell post-layout--right">
+    <div class="post-text" itemprop="text">
+<p>You're right that the Laplace transform is <em>not</em> more general than the Fourier transform. They are just different. There are several (theoretically) important functions for which the Laplace transform doesn't exist, but the Fourier transform does. A few examples are</p>
+
+<ol>
+<li><span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-6-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;j&lt;/mi&gt;&lt;msub&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-93" style="width: 5.336em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.447em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.503em, 1004.45em, 2.836em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-94"><span class="mi" id="MathJax-Span-95" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-96" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-97" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-98" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-99" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">=</span><span class="msubsup" id="MathJax-Span-100" style="padding-left: 0.336em;"><span style="display: inline-block; position: relative; width: 1.725em; height: 0px;"><span style="position: absolute; clip: rect(3.392em, 1000.39em, 4.169em, -999.997em); top: -3.997em; left: 0em;"><span class="mi" id="MathJax-Span-101" style="font-family: STIXGeneral-Italic;">e</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; top: -4.386em; left: 0.447em;"><span class="texatom" id="MathJax-Span-102"><span class="mrow" id="MathJax-Span-103"><span class="mi" id="MathJax-Span-104" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">j<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="msubsup" id="MathJax-Span-105"><span style="display: inline-block; position: relative; width: 0.781em; height: 0px;"><span style="position: absolute; clip: rect(3.503em, 1000.45em, 4.169em, -999.997em); top: -3.997em; left: 0em;"><span class="mi" id="MathJax-Span-106" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">ω</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; top: -3.886em; left: 0.503em;"><span class="mn" id="MathJax-Span-107" style="font-size: 50%; font-family: STIXGeneral-Regular;">0</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span></span><span class="mi" id="MathJax-Span-108" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.337em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><msup><mi>e</mi><mrow class="MJX-TeXAtom-ORD"><mi>j</mi><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-6">x(t)=e^{j\omega_0t}</script></span></li>
+<li><span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-7-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mo&gt;&amp;#x2061;&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;+&lt;/mo&gt;&lt;mi&gt;&amp;#x03D5;&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-109" style="width: 9.447em; display: inline-block;"><span style="display: inline-block; position: relative; width: 7.836em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1007.78em, 2.892em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-110"><span class="mi" id="MathJax-Span-111" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-112" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-113" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-114" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-115" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">=</span><span class="mi" id="MathJax-Span-116" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">sin</span><span class="mo" id="MathJax-Span-117"></span><span class="mo" id="MathJax-Span-118" style="font-family: STIXGeneral-Regular;">(</span><span class="msubsup" id="MathJax-Span-119"><span style="display: inline-block; position: relative; width: 1.114em; height: 0px;"><span style="position: absolute; clip: rect(3.392em, 1000.67em, 4.169em, -999.997em); top: -3.997em; left: 0em;"><span class="mi" id="MathJax-Span-120" style="font-family: STIXGeneral-Italic;">ω</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; top: -3.831em; left: 0.669em;"><span class="mn" id="MathJax-Span-121" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">0</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span></span><span class="mi" id="MathJax-Span-122" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-123" style="font-family: STIXGeneral-Regular; padding-left: 0.281em;">+</span><span class="mi" id="MathJax-Span-124" style="font-family: STIXGeneral-Italic; padding-left: 0.281em;">ϕ</span><span class="mo" id="MathJax-Span-125" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi>ϕ</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-7">x(t)=\sin(\omega_0t+\phi)</script></span></li>
+<li><span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-8-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mtext&gt;sinc&lt;/mtext&gt;&lt;/mrow&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;msub&gt;&lt;mi&gt;&amp;#x03C9;&lt;/mi&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/msub&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-126" style="width: 7.669em; display: inline-block;"><span style="display: inline-block; position: relative; width: 6.392em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1006.34em, 2.836em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-127"><span class="mi" id="MathJax-Span-128" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-129" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-130" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-131" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-132" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">=</span><span class="texatom" id="MathJax-Span-133" style="padding-left: 0.336em;"><span class="mrow" id="MathJax-Span-134"><span class="mtext" id="MathJax-Span-135" style="font-family: STIXGeneral-Regular;">sinc</span></span></span><span class="mo" id="MathJax-Span-136" style="font-family: STIXGeneral-Regular;">(</span><span class="msubsup" id="MathJax-Span-137"><span style="display: inline-block; position: relative; width: 1.114em; height: 0px;"><span style="position: absolute; clip: rect(3.392em, 1000.67em, 4.169em, -999.997em); top: -3.997em; left: 0em;"><span class="mi" id="MathJax-Span-138" style="font-family: STIXGeneral-Italic;">ω</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; top: -3.831em; left: 0.669em;"><span class="mn" id="MathJax-Span-139" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">0</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span></span><span class="mi" id="MathJax-Span-140" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-141" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mrow class="MJX-TeXAtom-ORD"><mtext>sinc</mtext></mrow><mo stretchy="false">(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-8">x(t)= \textrm{sinc}(\omega_0t)</script></span></li>
+<li><span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-9-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mfrac&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mrow&gt;&lt;mi&gt;&amp;#x03C0;&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;/mfrac&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-142" style="width: 4.503em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.725em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.447em, 1003.73em, 3.003em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-143"><span class="mi" id="MathJax-Span-144" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-145" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-146" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-147" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-148" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">=</span><span class="mfrac" id="MathJax-Span-149" style="padding-left: 0.336em;"><span style="display: inline-block; position: relative; width: 0.725em; height: 0px; margin-right: 0.114em; margin-left: 0.114em;"><span style="position: absolute; clip: rect(3.336em, 1000.28em, 4.169em, -999.997em); top: -4.386em; left: 50%; margin-left: -0.164em;"><span class="mn" id="MathJax-Span-150" style="font-size: 70.7%; font-family: STIXGeneral-Regular;">1</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(3.447em, 1000.61em, 4.169em, -999.997em); top: -3.664em; left: 50%; margin-left: -0.275em;"><span class="mrow" id="MathJax-Span-151"><span class="mi" id="MathJax-Span-152" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mi" id="MathJax-Span-153" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; clip: rect(0.836em, 1000.73em, 1.225em, -999.997em); top: -1.275em; left: 0em;"><span style="display: inline-block; overflow: hidden; vertical-align: 0em; border-top: 1.3px solid; width: 0.725em; height: 0px;"></span><span style="display: inline-block; width: 0px; height: 1.058em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.463em; border-left: 0px solid; width: 0px; height: 1.603em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>π</mi><mi>t</mi></mrow></mfrac></math></span></span><script type="math/tex" id="MathJax-Element-9">x(t)=\frac{1}{\pi t}</script></span></li>
+<li><span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-10-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;x&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mo&gt;=&lt;/mo&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mtext&gt;sign&lt;/mtext&gt;&lt;/mrow&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-154" style="width: 6.447em; display: inline-block;"><span style="display: inline-block; position: relative; width: 5.336em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1005.28em, 2.892em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-155"><span class="mi" id="MathJax-Span-156" style="font-family: STIXGeneral-Italic;">x<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-157" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-158" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-159" style="font-family: STIXGeneral-Regular;">)</span><span class="mo" id="MathJax-Span-160" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">=</span><span class="texatom" id="MathJax-Span-161" style="padding-left: 0.336em;"><span class="mrow" id="MathJax-Span-162"><span class="mtext" id="MathJax-Span-163" style="font-family: STIXGeneral-Regular;">sign</span></span></span><span class="mo" id="MathJax-Span-164" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-165" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-166" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.33em; border-left: 0px solid; width: 0px; height: 1.203em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>x</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mo>=</mo><mrow class="MJX-TeXAtom-ORD"><mtext>sign</mtext></mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-10">x(t)=\textrm{sign}(t)</script></span></li>
+</ol>
+
+<p>The first two involve Dirac impulses in their Fourier transform, whereas the third and the fourth have discontinuous Fourier transforms. I hope it is obvious why the complex exponential and the sine are important. The <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-11-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mtext&gt;sinc&lt;/mtext&gt;&lt;/mrow&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-167" style="width: 1.947em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.614em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1001.56em, 2.669em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-168"><span class="texatom" id="MathJax-Span-169"><span class="mrow" id="MathJax-Span-170"><span class="mtext" id="MathJax-Span-171" style="font-family: STIXGeneral-Regular;">sinc</span></span></span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 0.937em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mtext>sinc</mtext></mrow></math></span></span><script type="math/tex" id="MathJax-Element-11">\textrm{sinc}</script></span> function is needed to represent the impulse response of ideal frequency-selective filters, such as low pass and high pass filters, and <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-12-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mo&gt;/&lt;/mo&gt;&lt;/mrow&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;&amp;#x03C0;&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-172" style="width: 2.781em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.281em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1002.23em, 2.836em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-173"><span class="mn" id="MathJax-Span-174" style="font-family: STIXGeneral-Regular;">1</span><span class="texatom" id="MathJax-Span-175"><span class="mrow" id="MathJax-Span-176"><span class="mo" id="MathJax-Span-177" style="font-family: STIXGeneral-Regular;">/</span></span></span><span class="mo" id="MathJax-Span-178" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-179" style="font-family: STIXGeneral-Italic;">π<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.058em;"></span></span><span class="mi" id="MathJax-Span-180" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-181" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>1</mn><mrow class="MJX-TeXAtom-ORD"><mo>/</mo></mrow><mo stretchy="false">(</mo><mi>π</mi><mi>t</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-12">1/(\pi t)</script></span> is the impulse response of an ideal Hilbert transformer. Note that those functions are non-causal (i.e., they are not zero for <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-13-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-182" style="width: 2.558em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.114em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1002.11em, 2.669em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-183"><span class="mi" id="MathJax-Span-184" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-185" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">&lt;</span><span class="mn" id="MathJax-Span-186" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&lt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-13">t<0</script></span>). The class of non-causal functions for which the (two-sided) Laplace transform exists is quite restricted because damping through multiplication with <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-14-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;msup&gt;&lt;mi&gt;e&lt;/mi&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;/mrow&gt;&lt;/msup&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-187" style="width: 1.225em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.003em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.281em, 1001em, 2.336em, -999.997em); top: -2.164em; left: 0em;"><span class="mrow" id="MathJax-Span-188"><span class="msubsup" id="MathJax-Span-189"><span style="display: inline-block; position: relative; width: 1.003em; height: 0px;"><span style="position: absolute; clip: rect(3.392em, 1000.39em, 4.169em, -999.997em); top: -3.997em; left: 0em;"><span class="mi" id="MathJax-Span-190" style="font-family: STIXGeneral-Italic;">e</span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span><span style="position: absolute; top: -4.386em; left: 0.447em;"><span class="texatom" id="MathJax-Span-191"><span class="mrow" id="MathJax-Span-192"><span class="mi" id="MathJax-Span-193" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">s</span><span class="mi" id="MathJax-Span-194" style="font-size: 70.7%; font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.003em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.169em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.07em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><msup><mi>e</mi><mrow class="MJX-TeXAtom-ORD"><mi>s</mi><mi>t</mi></mrow></msup></math></span></span><script type="math/tex" id="MathJax-Element-14">e^{st}</script></span> only works either for <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-15-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;&amp;gt;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-195" style="width: 2.558em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.114em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1002.11em, 2.669em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-196"><span class="mi" id="MathJax-Span-197" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-198" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">&gt;</span><span class="mn" id="MathJax-Span-199" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&gt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-15">t>0</script></span> (if <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-16-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mtext&gt;Re&lt;/mtext&gt;&lt;/mrow&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;{&lt;/mo&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;}&lt;/mo&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-200" style="width: 5.169em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.281em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1004.28em, 2.836em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-201"><span class="texatom" id="MathJax-Span-202"><span class="mrow" id="MathJax-Span-203"><span class="mtext" id="MathJax-Span-204" style="font-family: STIXGeneral-Regular;">Re</span></span></span><span class="mo" id="MathJax-Span-205" style="font-family: STIXGeneral-Regular;">{</span><span class="mi" id="MathJax-Span-206" style="font-family: STIXGeneral-Italic;">s</span><span class="mo" id="MathJax-Span-207" style="font-family: STIXGeneral-Regular;">}</span><span class="mo" id="MathJax-Span-208" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">&lt;</span><span class="mn" id="MathJax-Span-209" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mtext>Re</mtext></mrow><mo fence="false" stretchy="false">{</mo><mi>s</mi><mo fence="false" stretchy="false">}</mo><mo>&lt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-16">\textrm{Re}\{s\}<0</script></span>) or for <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-17-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo&gt;&amp;lt;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-210" style="width: 2.558em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.114em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1002.11em, 2.669em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-211"><span class="mi" id="MathJax-Span-212" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-213" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">&lt;</span><span class="mn" id="MathJax-Span-214" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.063em; border-left: 0px solid; width: 0px; height: 1.003em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>t</mi><mo>&lt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-17">t<0</script></span> (if <span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-18-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mrow class=&quot;MJX-TeXAtom-ORD&quot;&gt;&lt;mtext&gt;Re&lt;/mtext&gt;&lt;/mrow&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;{&lt;/mo&gt;&lt;mi&gt;s&lt;/mi&gt;&lt;mo fence=&quot;false&quot; stretchy=&quot;false&quot;&gt;}&lt;/mo&gt;&lt;mo&gt;&amp;gt;&lt;/mo&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-215" style="width: 5.169em; display: inline-block;"><span style="display: inline-block; position: relative; width: 4.281em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1004.28em, 2.836em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-216"><span class="texatom" id="MathJax-Span-217"><span class="mrow" id="MathJax-Span-218"><span class="mtext" id="MathJax-Span-219" style="font-family: STIXGeneral-Regular;">Re</span></span></span><span class="mo" id="MathJax-Span-220" style="font-family: STIXGeneral-Regular;">{</span><span class="mi" id="MathJax-Span-221" style="font-family: STIXGeneral-Italic;">s</span><span class="mo" id="MathJax-Span-222" style="font-family: STIXGeneral-Regular;">}</span><span class="mo" id="MathJax-Span-223" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">&gt;</span><span class="mn" id="MathJax-Span-224" style="font-family: STIXGeneral-Regular; padding-left: 0.336em;">0</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mrow class="MJX-TeXAtom-ORD"><mtext>Re</mtext></mrow><mo fence="false" stretchy="false">{</mo><mi>s</mi><mo fence="false" stretchy="false">}</mo><mo>&gt;</mo><mn>0</mn></math></span></span><script type="math/tex" id="MathJax-Element-18">\textrm{Re}\{s\}>0</script></span>), but not for both.</p>
+
+<p>In your first example (<span class="math-container"><span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-19-Frame" tabindex="0" data-mathml="&lt;math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;&gt;&lt;mi&gt;sin&lt;/mi&gt;&lt;mo&gt;&amp;#x2061;&lt;/mo&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;mi&gt;u&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;(&lt;/mo&gt;&lt;mi&gt;t&lt;/mi&gt;&lt;mo stretchy=&quot;false&quot;&gt;)&lt;/mo&gt;&lt;/math&gt;" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-225" style="width: 4.281em; display: inline-block;"><span style="display: inline-block; position: relative; width: 3.558em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.669em, 1003.5em, 2.836em, -999.997em); top: -2.497em; left: 0em;"><span class="mrow" id="MathJax-Span-226"><span class="mi" id="MathJax-Span-227" style="font-family: STIXGeneral-Regular;">sin</span><span class="mo" id="MathJax-Span-228"></span><span class="mo" id="MathJax-Span-229" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-230" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-231" style="font-family: STIXGeneral-Regular;">)</span><span class="mi" id="MathJax-Span-232" style="font-family: STIXGeneral-Italic;">u</span><span class="mo" id="MathJax-Span-233" style="font-family: STIXGeneral-Regular;">(</span><span class="mi" id="MathJax-Span-234" style="font-family: STIXGeneral-Italic;">t<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.003em;"></span></span><span class="mo" id="MathJax-Span-235" style="font-family: STIXGeneral-Regular;">)</span></span><span style="display: inline-block; width: 0px; height: 2.503em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.263em; border-left: 0px solid; width: 0px; height: 1.137em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>sin</mi><mo>⁡</mo><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mi>u</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></math></span></span><script type="math/tex" id="MathJax-Element-19">\sin(t)u(t)</script></span>) you got the Fourier transform wrong, even though it does contain Dirac impulses. The Fourier transform has Dirac impulses whenever the Laplace transform (if it exists) has poles on the imaginary axis.</p>
+    </div>
+    <div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy">
+    <div class="grid--cell mr16" style="flex: 1 1 100px;">
+<div class="post-menu"><a href="https://dsp.stackexchange.com/a/53876" title="short permalink to this answer" class="short-link" id="link-post-53876">share</a><span class="lsep">|</span><a href="https://dsp.stackexchange.com/posts/53876/edit" class="suggest-edit-post" title="">improve this answer</a></div>                    </div>
+    <div class="post-signature grid--cell fl0">
+<div class="user-info ">
+    <div class="user-action-time">
+        <a href="https://dsp.stackexchange.com/posts/53876/revisions" title="show all edits to this post">edited <span title="2018-12-03 16:05:07Z" class="relativetime">15 hours ago</span></a>
+    </div>
+    <div class="user-gravatar32">
+        
+    </div>
+    <div class="user-details">
+        
+        <div class="-flair">
+            
+        </div>
+    </div>
+</div>    </div>
+            
+
+
+    <div class="post-signature grid--cell fl0">
+<div class="user-info user-hover">
+    <div class="user-action-time">
+        answered <span title="2018-12-03 13:36:46Z" class="relativetime">18 hours ago</span>
+    </div>
+    <div class="user-gravatar32">
+        <a href="https://dsp.stackexchange.com/users/4298/matt-l"><div class="gravatar-wrapper-32"><img src="./q1_files/f1c5d52034cdaabe6423d5fd7e2a1326" alt="" width="32" height="32"></div></a>
+    </div>
+    <div class="user-details">
+        <a href="https://dsp.stackexchange.com/users/4298/matt-l">Matt L.</a>
+        <div class="-flair">
+            <span class="reputation-score" title="reputation score 48,131" dir="ltr">48.1k</span><span title="1 gold badge"><span class="badge1"></span><span class="badgecount">1</span></span><span title="36 silver badges"><span class="badge2"></span><span class="badgecount">36</span></span><span title="83 bronze badges"><span class="badge3"></span><span class="badgecount">83</span></span>
+        </div>
+    </div>
+</div>
+
+    </div>
+    </div>
+</div>
+    
+    <div class="post-layout--right">
+	    <div id="comments-53876" class="comments js-comments-container ">
+            <ul class="comments-list js-comments-list" data-remaining-comments-count="0" data-canpost="false" data-cansee="true" data-comments-unavailable="false" data-addlink-disabled="true">
+
+
+    <li id="comment-107871" class="comment js-comment " data-comment-id="107871">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;">
+                <span class="comment-copy">Thank you for your detailed answer! Just to clarify a point, so for the above listed functions, Bilateral Laplace Transform doesn't exist right?</span>
+                    –&nbsp;<a href="https://dsp.stackexchange.com/users/37611/ramith-hettiarachchi" title="8 reputation" class="comment-user owner">Ramith Hettiarachchi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of#comment107871_53876"><span title="2018-12-03 14:35:08Z" class="relativetime-clean">17 hours ago</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-107872" class="comment js-comment " data-comment-id="107872">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;">
+                <span class="comment-copy">I was actually confused initially with this. <a href="https://www.quora.com/Why-do-some-functions-which-have-Fourier-transform-dont-have-Laplace-transform" rel="nofollow noreferrer">quora.com/…</a></span>
+                    –&nbsp;<a href="https://dsp.stackexchange.com/users/37611/ramith-hettiarachchi" title="8 reputation" class="comment-user owner">Ramith Hettiarachchi</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of#comment107872_53876"><span title="2018-12-03 14:36:25Z" class="relativetime-clean">17 hours ago</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-107883" class="comment js-comment " data-comment-id="107883">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;">
+                <span class="comment-copy">@RamithHettiarachchi: You're right, that was the point: for those functions the (bilateral) Laplace transform doesn't exist, but the Fourier transform does (if we allow discontinuous transforms and Dirac delta impulses).</span>
+                    –&nbsp;<a href="https://dsp.stackexchange.com/users/4298/matt-l" title="48,131 reputation" class="comment-user">Matt L.</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of#comment107883_53876"><span title="2018-12-03 15:50:22Z" class="relativetime-clean">15 hours ago</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+    <li id="comment-107884" class="comment js-comment " data-comment-id="107884">
+        <div class="js-comment-actions comment-actions">
+            <div class="comment-score">
+                    <span title="number of &#39;useful comment&#39; votes received" class="cool">1</span>
+            </div>
+                    </div>
+        <div class="comment-text js-comment-text-and-form">
+            <div class="comment-body" style="display: block;">
+                <span class="comment-copy">@RamithHettiarachchi: I can understand that you got confused with the answer in the quora link ... :)</span>
+                    –&nbsp;<a href="https://dsp.stackexchange.com/users/4298/matt-l" title="48,131 reputation" class="comment-user">Matt L.</a>
+                <span class="comment-date" dir="ltr"><a class="comment-link" href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of#comment107884_53876"><span title="2018-12-03 15:50:53Z" class="relativetime-clean">15 hours ago</span></a></span>
+                                                                            </div>
+        </div>
+    </li>
+            </ul>
+	    </div>
+
+        <div id="comments-link-53876" data-rep="50" data-anon="true">
+
+                <a class="js-add-link comments-link disabled-link " title="Use comments to ask for more information or suggest improvements. Avoid comments like “+1” or “thanks”.">add a comment</a><span class="js-link-separator dno">&nbsp;|&nbsp;</span>
+            <a class="js-show-link comments-link dno" title="expand to show all comments on this post" href="https://dsp.stackexchange.com/questions/53875/can-a-fourier-transform-exist-even-if-the-j-omega-axis-is-not-in-the-region-of#" onclick=""></a>
+        </div>         
+    </div>    </div>
+</div>
+                                    
+                        
+
+
+
+                        
+            </div>
+        </div>
+                
+    </div>
+<script>StackExchange.ready(function(){$.get('/posts/53875/ivc/e2b1');});</script>
+<noscript><div><img src="/posts/53875/ivc/e2b1" class="dno" alt="" width="0" height="0"></div></noscript></div>
+
+
+        </div>
+    </div>
+
+    
+    
+
+
+            
+    
+    
+</body></html>

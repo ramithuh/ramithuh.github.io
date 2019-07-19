@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+$$\mathcal{F}(sin(t))=−i\pi(\delta(\omega−1)−\delta(\omega+1))$$
+
+$$\mathcal{L}\{\ sin( t) \ \} \ \rightarrow \ doesn't\ exist\ ?$$
+<hr>
+
+$$\begin{equation*}\mathcal{F}\{\ sin( t) u( t) \ \} =−\frac{1}{2} \ i\pi \delta ( \omega −1) +\frac{1}{2} \ \ iπ\delta ( \omega +1) −\frac{1}{2} \ \ ( \omega −1) +\frac{1}{2} \ ( \omega +1)\end{equation*}$$
+$$\begin{gather*}\mathcal{L}\{\ sin( t) u( t) \ \} \ =\frac{1}{s^{2} +1} \ ;\ Re\{s\}  >0\\\\when\ s=jw\ doesn't\ resolve\ to\ it's\ fourier\ transform?\end{gather*}$$
+</body>
+</html>

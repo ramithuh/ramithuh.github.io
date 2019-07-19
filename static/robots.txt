@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: http://blog.ramith.fyi/sitemap.xml
+Disallow: /ghost/
+Disallow: /p/

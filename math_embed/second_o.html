@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax Second Order</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+    $$x(t)=RC\frac{ dy(t)}{dt}+LC\frac{d^2y(t)}{dt}+y(t)$$
+    By applying Laplace Transform to both sides, and using the differentiation property, we get,
+    $$x(s)=(RC) s Y(s)+ (LC) s^2 Y(s) + Y(s)$$
+    $$H(s)=\frac{Y(s)}{X(s)} =\frac{( 1/LC)}{s^{2} +( R/L) \ s+( 1/LC)}$$
+    Where $\omega$ and $\zeta$ have the relationship,
+    $$\left(\omega =\sqrt{\frac{1}{\text{LC}}}\right) \left(\zeta =\frac{1}{2} R \sqrt{\frac{C}{L}}\right)$$
+    $$\text{c1}=\sqrt{\zeta ^2-1} \omega -\zeta  \omega$$
+    $$\text{c2}=-\sqrt{\zeta ^2-1} \omega -\zeta  \omega$$
+    
+  $$H(s)=\frac{\omega ^2}{(s-\text{c1}) (s-\text{c2})}$$
+<br>
+By getting partial fractions,
+
+$$H(s)=\frac{\omega ^{2}}{\text{c1} -\text{c2}} *\left(\frac{1}{s-\text{c1}} -\frac{1}{s-\text{c2}}\right)$$
+from this simplified notation we can derive the impulse response in the time domain,
+
+$$ \begin{array}{l}
+h(t)=\frac{\omega ^{2}}{\text{c1} -\text{c2}} *\left( e^{\text{c1} t} *u( t) -e^{\text{c2t}} *u( t)\right)\\
+\\
+s(t)=\frac{\omega ^{2}}{\text{c1} -\text{c2}} *\left(\frac{e^{\text{c1} t} -1}{\text{c1}} -\frac{e^{\text{c2t}} -1}{\text{c2}}\right)
+\end{array}$$
+
+Now we have s(t) which is the unit step respose!
+</body>
+</html>

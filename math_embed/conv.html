@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MathJax TeX Test Page</title>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript" async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+
+  <math xmlns='http://www.w3.org/1998/Math/MathML'
+  mathematica:form='StandardForm'
+  xmlns:mathematica='http://www.wolfram.com/XML/'>
+<mrow>
+<mrow>
+ <mrow>
+  <mrow>
+   <mi>xt</mi>
+   <mo>[</mo>
+   <mi>&#964;_</mi>
+   <mo>]</mo>
+  </mrow>
+  <mo>=</mo>
+  <mrow>
+   <mi>Piecewise</mi>
+   <mo>[</mo>
+   <mrow>
+    <mo>{</mo>
+    <mrow>
+     <mrow>
+      <mo>{</mo>
+      <mrow>
+       <mn>0</mn>
+       <mo>,</mo>
+       <mrow>
+        <mrow>
+         <mi>&#964;</mi>
+         <mo>&lt;</mo>
+         <mn>1</mn>
+        </mrow>
+        <mtext> </mtext>
+        <mo>||</mo>
+        <mtext> </mtext>
+        <mrow>
+         <mi>&#964;</mi>
+         <mo>&gt;</mo>
+         <mn>3</mn>
+        </mrow>
+       </mrow>
+      </mrow>
+      <mo>}</mo>
+     </mrow>
+     <mo>,</mo>
+     <mrow>
+      <mo>{</mo>
+      <mrow>
+       <mn>1</mn>
+       <mo>,</mo>
+       <mrow>
+        <mn>3</mn>
+        <mo>&gt;</mo>
+        <mi>&#964;</mi>
+        <mo>&gt;</mo>
+        <mn>1</mn>
+       </mrow>
+      </mrow>
+      <mo>}</mo>
+     </mrow>
+    </mrow>
+    <mo>}</mo>
+   </mrow>
+   <mo>]</mo>
+  </mrow>
+ </mrow>
+ <mtext> </mtext>
+ <mo>;</mo>
+ <mrow>
+  <mtext>(*</mtext>
+  <mtext> </mtext>
+  <mi>INPUT</mi>
+  <mtext> </mtext>
+  <mtext>*)</mtext>
+ </mrow>
+ <br>
+ <mo>&#8290;</mo>
+ <mtext>&#62371;</mtext>
+ <mrow>
+  <mrow>
+   <mi>ht</mi>
+   <mo>[</mo>
+   <mi>&#964;_</mi>
+   <mo>]</mo>
+  </mrow>
+  <mo>:=</mo>
+  <mrow>
+   <mi>UnitStep</mi>
+   <mo>[</mo>
+   <mi>&#964;</mi>
+   <mo>]</mo>
+  </mrow>
+ </mrow>
+</mrow>
+<mo>&#8290;</mo>
+<mrow>
+ <mtext>(*</mtext>
+ <mtext> </mtext>
+ <mrow>
+  <mi>Impulse</mi>
+  <mo>&#8290;</mo>
+  <mi>Response</mi>
+  <mo>&#8290;</mo>
+  <mi>H</mi>
+  <mo>&#8290;</mo>
+  <mrow>
+   <mo>(</mo>
+   <mi>t</mi>
+   <mo>)</mo>
+  </mrow>
+ </mrow>
+ <mtext> </mtext>
+ <mtext>*)</mtext>
+</mrow>
+<mo>&#8290;</mo>
+<mtext> </mtext>
+<mtext>&#62371;</mtext>
+<mrow>
+ <mrow>
+  <mi>yt</mi>
+  <mo>[</mo>
+  <mi>&#964;_</mi>
+  <mo>]</mo>
+ </mrow>
+ <mo>:=</mo>
+ <mrow>
+  <mi>Convolve</mi>
+  <mo>[</mo>
+  <mrow>
+   <mrow>
+    <mi>ht</mi>
+    <mo>[</mo>
+    <mi>x</mi>
+    <mo>]</mo>
+   </mrow>
+   <mo>,</mo>
+   <mrow>
+    <mi>xt</mi>
+    <mo>[</mo>
+    <mi>x</mi>
+    <mo>]</mo>
+   </mrow>
+   <mo>,</mo>
+   <mi>x</mi>
+   <mo>,</mo>
+   <mi>&#964;</mi>
+  </mrow>
+  <mo>]</mo>
+ </mrow>
+ <mtext> </mtext>
+</mrow>
+</mrow>
+</math></body>
+</html>
