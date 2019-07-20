@@ -9,7 +9,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=39b58e94b6">
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=23038ed78b">
 
     <link rel="shortcut icon" href="../favicon.png" type="image/png">
     <link rel="canonical" href="https://blog.ramith.fyi/static/learning-a-new-hardware-platform-scholarx-part-2/">
@@ -29,7 +29,10 @@ With the encouragement we got from our lecturer, Dr. Ajith Pasqual, I along with
 my team members ">
     <meta property="og:url" content="https://blog.ramith.fyi/static/learning-a-new-hardware-platform-scholarx-part-2/">
     <meta property="article:published_time" content="2019-07-19T13:43:47.000Z">
-    <meta property="article:modified_time" content="2019-07-19T16:34:54.000Z">
+    <meta property="article:modified_time" content="2019-07-20T01:11:35.000Z">
+    <meta property="article:tag" content="ML">
+    <meta property="article:tag" content="DL">
+    
     <meta property="article:publisher" content="https://www.facebook.com/ramithuh">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Learning a new hardware platform (ScholarX - Part 2)">
@@ -45,6 +48,8 @@ my team members ">
     <meta name="twitter:url" content="https://blog.ramith.fyi/static/learning-a-new-hardware-platform-scholarx-part-2/">
     <meta name="twitter:label1" content="Written by">
     <meta name="twitter:data1" content="Ramith Hettiarachchi">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="ML, DL">
     <meta name="twitter:site" content="@ramithuh">
     
     <script type="application/ld+json">
@@ -71,7 +76,8 @@ my team members ">
     "headline": "Learning a new hardware platform (ScholarX - Part 2)",
     "url": "https://blog.ramith.fyi/static/learning-a-new-hardware-platform-scholarx-part-2/",
     "datePublished": "2019-07-19T13:43:47.000Z",
-    "dateModified": "2019-07-19T16:34:54.000Z",
+    "dateModified": "2019-07-20T01:11:35.000Z",
+    "keywords": "ML, DL",
     "description": "&gt; This post mainly reflects my experience in stepping into a new field with the\nhelp of my mentors.\nRecently, I&#x27;ve been more interested on Field Programmable Gate Arrays\n[https://en.wikipedia.org/wiki/Field-programmable_gate_array]. The excitement\ngrew from the fact that we learnt about computer architecture in Semester 3.\n\nIt was nice to expand my teensy knowledge I had in High level, to Low level.\nWith the encouragement we got from our lecturer, Dr. Ajith Pasqual, I along with\nmy team members ",
     "mainEntityOfPage": {
         "@type": "WebPage",
@@ -119,7 +125,7 @@ h1, h2, h3, h4, h5, h6,
 </style>
 
 </head>
-<body class="post-template">
+<body class="post-template tag-ml tag-dl">
 
     <div class="site-wrapper">
 
@@ -158,11 +164,12 @@ h1, h2, h3, h4, h5, h6,
 <main id="site-main" class="site-main outer">
     <div class="inner">
 
-        <article class="post-full post no-image">
+        <article class="post-full post tag-ml tag-dl no-image">
 
             <header class="post-full-header">
                 <section class="post-full-meta">
                     <time class="post-full-meta-date" datetime="2019-07-19">19 July 2019</time>
+                        <span class="date-divider">/</span> <a href="../tag/ml/index.html">ML</a>
                 </section>
                 <h1 class="post-full-title">Learning a new hardware platform (ScholarX - Part 2)</h1>
             </header>
@@ -170,7 +177,7 @@ h1, h2, h3, h4, h5, h6,
 
             <section class="post-full-content">
                 <div class="post-content">
-                    <blockquote>This post mainly reflects my experience in stepping into a new field with the help of my mentors.</blockquote><p>Recently, I've been more interested on <em><a href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">Field Programmable Gate Arrays</a></em>. The excitement grew from the fact that we learnt about computer architecture in Semester 3.</p><p>It was nice to expand my teensy knowledge I had in High level, to Low level. With the encouragement we got from our lecturer, Dr. Ajith Pasqual, I along with my team members decided to apply for <a href="http://www.innovatefpga.com">InnovateFPGA</a> competition. You can read about our project proposal <a href="http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047">here</a>. </p><p>In essence, the main functionality of this project include inferencing from a Deep Neural Network ported on an FPGA board. That's where I thought of getting some insights from <a href="https://sefglobal.org/scholarx/">Dr. Ruskhan Batuwita</a> during our mentoring session. </p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><p>When it comes to deep learning, I had a doubt as to whether there's a common format/standard for deep learning models. A format which has the interoperability between popular machine learning frameworks. We discussed this matter during our call and Dr. Rukshan explained me about the ONNX format. </p><p>Apparently ONNX is supported by various frameworks, runtimes &amp; compilers. </p><blockquote>“Even today with the ONNX workloads for AI, the compelling part is you can now build custom models or use our models, again using TensorFlow, PyTorch, Keras, whatever framework you want, and then know that you can hardware-accelerate it whether it’s on the latest Nvidia GPU, whether it’s on the new AMD GPUs, whether it’s on Intel FPGA, whether it’s on someone else’s FPGA or new silicon we might release in the future." - <em>Scott Guthrie, executive vice president for Microsoft's Cloud and Enterprise group</em></blockquote><p>This was an eye-opener for me to try out with my teammates, having received the FPGA board from <a href="http://https://blog.ramith.fyi/static/learning-a-new-hardware-platform-scholarx-part-2/www.terasic.com">Terasic</a> recently.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card"><img src="https://blog.ramith.fyi/static/content/images/2019/07/58523164393__004CE551-B01F-4A88-90C0-603AFDBF5DD8-copy-2.jpg" class="kg-image"></figure><!--kg-card-end: image-->
+                    <blockquote>This post mainly reflects my experience in stepping into a new field with the help of my mentors.</blockquote><p>Recently, I've been more interested on <em><a href="https://en.wikipedia.org/wiki/Field-programmable_gate_array">Field Programmable Gate Arrays</a></em>. The excitement grew from the fact that we learnt about computer architecture in Semester 3.</p><p>It was nice to expand my teensy knowledge I had in High level, to Low level. With the encouragement we got from our lecturer, Dr. Ajith Pasqual, I along with my team members decided to apply for <a href="http://www.innovatefpga.com">InnovateFPGA</a> competition. You can read more about our project proposal <a href="http://www.innovatefpga.com/cgi-bin/innovate/teams.pl?Id=AP047">here</a>. </p><p>In essence, the main functionality of this project include inferencing from a Deep Neural Network ported on an FPGA board. That's where I thought of getting some insights from <a href="https://sefglobal.org/scholarx/">Dr. Ruskhan Batuwita</a> during our mentoring session. </p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><p>When it comes to deep learning, I had a doubt as to whether there's a common format/standard for deep learning models. A format which has the interoperability between popular machine learning frameworks. We discussed this matter during our call and Dr. Rukshan explained me about the ONNX format. </p><p>Apparently ONNX is supported by various frameworks, runtimes &amp; compilers. </p><blockquote>“Even today with the ONNX workloads for AI, the compelling part is you can now build custom models or use our models, again using TensorFlow, PyTorch, Keras, whatever framework you want, and then know that you can hardware-accelerate it whether it’s on the latest Nvidia GPU, whether it’s on the new AMD GPUs, whether it’s on Intel FPGA, whether it’s on someone else’s FPGA or new silicon we might release in the future." - <em>Scott Guthrie, executive vice president for Microsoft's Cloud and Enterprise group</em></blockquote><p>This was an eye-opener for me to try out with my teammates, having received the FPGA board from <a href="http://https://blog.ramith.fyi/static/learning-a-new-hardware-platform-scholarx-part-2/www.terasic.com">Terasic</a> recently.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://blog.ramith.fyi/static/content/images/2019/07/58523164393__004CE551-B01F-4A88-90C0-603AFDBF5DD8-copy-2.jpg" class="kg-image"><figcaption>(powering up the FPGA for the first time ;) ) </figcaption></figure><!--kg-card-end: image--><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><p>The best thing about having group calls in our mentoring sessions is that, we get to hear about various problems each of us face. Sometimes these domains are something we might not already know. However we get to share interesting pieces of knowledge.</p><p>For an example, in the same chat, Savindi akki raised the question of transfer learning to be done in NLP and Haritha ayya shared his experience in his internship at DATA61@Sydney. </p><p>The second best thing is realising that the 6 of us are coming from 3 different timezones!</p>
                 </div>
             </section>
 
@@ -202,9 +209,25 @@ h1, h2, h3, h4, h5, h6,
 <aside class="read-next outer">
     <div class="inner">
         <div class="read-next-feed">
+                <article class="read-next-card" style="background-image: url(../content/images/size/w600/2018/11/new-1.jpeg)">
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">— Ramith's Blog —</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/ml/index.html">ML</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../setting-up-azure/index.html">Setting up DeepLearning Machine on Azure for fast.ai ⤑ (draft)</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/ml/index.html">1 post →</a>
+                    </footer>
+                </article>
 
 
-                <article class="post-card post ">
+                <article class="post-card post tag-electronics ">
 
     <a class="post-card-image-link" href="../making-a-robot-visualisation-platform-from-scratch/index.html">
         <img class="post-card-image" srcset="../content/images/size/w300/2019/07/cover-robot.jpg 300w,
@@ -218,6 +241,7 @@ h1, h2, h3, h4, h5, h6,
         <a class="post-card-content-link" href="../making-a-robot-visualisation-platform-from-scratch/index.html">
 
             <header class="post-card-header">
+                    <span class="post-card-tags">Electronics</span>
                 <h2 class="post-card-title">Making a robot Visualisation Platform from Scratch (and how you can do the same)</h2>
             </header>
 
@@ -314,7 +338,7 @@ h1, h2, h3, h4, h5, h6,
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=39b58e94b6"></script>
+    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=23038ed78b"></script>
 
 
     <script>
